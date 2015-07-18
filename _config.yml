@@ -1,0 +1,9 @@
+name: "Natasha Dalal"
+description: ""
+
+paginate: 10
+
+url: http://natashadalal.ca
+
+markdown: rdiscount
+permalink: pretty
