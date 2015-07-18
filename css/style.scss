@@ -26,16 +26,15 @@ body {
 
     }
 
-    #header-natasha-img {
-        height: 250px;
-        width: auto;
-    }
-
     .social-bar {
         color: black;
         font-size: 40px;
-        margin-top: 20px;
-        float: right;
+
+        @media screen and (min-width : 768px) {
+            text-align: right;
+            margin-top: 20px;
+        }
+
         a {
             color: gray;
             border-bottom: none;
