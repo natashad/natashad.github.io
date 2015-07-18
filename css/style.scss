@@ -1,44 +1,108 @@
 body {
     font-family: 'Raleway', sans-serif;
+    font-size: 16px;
 
     .header {
-        background-color: black;
-    }
-
-    #header-natasha-text {
-        font-size: 16px;
-        padding: 20px 0px;
-        color: white;
-        font-style: italic;
-        font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
-
-        .terminal {
-            color: green;
+        padding: 20px 0;
+        text-align: center;
+        background-color: #EEE;
+        border-bottom: 6px solid crimson;
+        h1#natasha-name {
+            padding: 0;
+            font-family: 'Lobster', cursive;
         }
 
-        .name {
-            font-size: 25px;
-        }
-        a {
-            color: #337ab7;
-            border-bottom: 1px dotted #337ab7;
-        }
-
-    }
-
-    .social-bar {
-        color: black;
-        font-size: 40px;
-
-        @media screen and (min-width : 768px) {
-            text-align: right;
-            margin-top: 20px;
-        }
-
-        a {
-            color: gray;
-            border-bottom: none;
-            padding-right: 10px;
+        .nav-links {
+            margin: 0;
+            margin-top: 10px;
+            padding: 0;
+            a {
+                margin-right: 10px;
+                text-transform: uppercase;
+            }
         }
     }
+
+    .page-sec {
+
+        margin-top: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        .icon-circle {
+            margin: 0 auto;
+            height: 100px;
+            width: 100px;
+            i {
+                font-size: 50px;
+                margin-top: 25px;
+            }
+
+            .circle-inner {
+                height:100px;
+                width:100px;
+                background: aliceblue;
+                -moz-border-radius: 50px;
+                -webkit-border-radius: 50px;
+                border-radius: 50px;
+            }
+        }
+    }
+
+
+
+
+
+    .old {
+        .header {
+            background-color: black;
+            margin-bottom: 20px;
+
+            #header-natasha-text {
+                font-size: 16px;
+                padding: 20px 0px;
+                color: white;
+                font-style: italic;
+                font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+
+                .terminal {
+                    color: green;
+                }
+
+                .name {
+                    font-size: 25px;
+                }
+                a {
+                    color: #337ab7;
+                    border-bottom: 1px dotted #337ab7;
+                }
+
+            }
+
+            .social-bar {
+                color: black;
+                font-size: 40px;
+
+                @media screen and (min-width : 768px) {
+                    text-align: right;
+                    margin-top: 20px;
+                }
+
+                a {
+                    color: gray;
+                    border-bottom: none;
+                    padding-right: 10px;
+                }
+            }
+        }
+
+        section.about {
+            background-color: #EEE;
+        }
+    }
+
 }
