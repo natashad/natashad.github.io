@@ -68,57 +68,28 @@ body {
                 }
             }
         }
+
     }
 
-
-
-
-
-    .old {
-        .header {
-            background-color: black;
+    section.portfolio {
+        h1 {
+            font-family: 'Lobster', cursive;
             margin-bottom: 20px;
+        }
+    }
 
-            #header-natasha-text {
-                font-size: 16px;
-                padding: 20px 0px;
-                color: white;
-                font-style: italic;
-                font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+    .a-project {
+        margin: 20px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 5px;
 
-                .terminal {
-                    color: green;
-                }
-
-                .name {
-                    font-size: 25px;
-                }
-                a {
-                    color: #337ab7;
-                    border-bottom: 1px dotted #337ab7;
-                }
-
-            }
-
-            .social-bar {
-                color: black;
-                font-size: 40px;
-
-                @media screen and (min-width : 768px) {
-                    text-align: right;
-                    margin-top: 20px;
-                }
-
-                a {
-                    color: gray;
-                    border-bottom: none;
-                    padding-right: 10px;
-                }
-            }
+        img {
+            width: 100%;
         }
 
-        section.about {
-            background-color: #EEE;
+        p {
+            padding: 10px;
         }
     }
 

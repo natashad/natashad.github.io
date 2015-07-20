@@ -46,34 +46,17 @@ body {
         text-decoration: none;
         font-size: 18px;
         margin-right: 5px; }
-  body .old .header {
-    background-color: black;
+  body section.portfolio h1 {
+    font-family: 'Lobster', cursive;
     margin-bottom: 20px; }
-    body .old .header #header-natasha-text {
-      font-size: 16px;
-      padding: 20px 0px;
-      color: white;
-      font-style: italic;
-      font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace; }
-      body .old .header #header-natasha-text .terminal {
-        color: green; }
-      body .old .header #header-natasha-text .name {
-        font-size: 25px; }
-      body .old .header #header-natasha-text a {
-        color: #337ab7;
-        border-bottom: 1px dotted #337ab7; }
-    body .old .header .social-bar {
-      color: black;
-      font-size: 40px; }
-      @media screen and (min-width: 768px) {
-        body .old .header .social-bar {
-          text-align: right;
-          margin-top: 20px; } }
-      body .old .header .social-bar a {
-        color: gray;
-        border-bottom: none;
-        padding-right: 10px; }
-  body .old section.about {
-    background-color: #EEE; }
+  body .a-project {
+    margin: 20px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px; }
+    body .a-project img {
+      width: 100%; }
+    body .a-project p {
+      padding: 10px; }
 
 /*# sourceMappingURL=style.css.map */
