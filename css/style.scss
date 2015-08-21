@@ -70,9 +70,12 @@ body {
             font-size: 40px;
             position: absolute;
             top: 30px;
-            right: 10px;
+            right: 20px;
             color: #AAA;
             cursor: pointer;
+            &.sidebar-open-button {
+                right: 10px;
+            }
         }
         &.open {
             width: 25%;
