@@ -124,6 +124,9 @@ body {
           margin-left: 0;
           display: inline-block;
           vertical-align: top;
+          @media screen and (max-width: 480px) {
+            padding-left: 0;
+          }
           li {
             padding-right: 5px;
             padding-bottom: 5px;
@@ -145,6 +148,9 @@ body {
     .subsubtitle {
         margin-bottom: 0;
         margin-left: 40px;
+        @media screen and (max-width: 480px) {
+            margin-left: 0;
+        }
         span {
             border-bottom: 2px solid red;
         }
