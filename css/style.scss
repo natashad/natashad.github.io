@@ -63,7 +63,7 @@ body {
         }
 
         .expanded-content {
-            padding-top: 200px;
+            padding-top: 40%;
         }
 
         .sidebar-control {
@@ -74,17 +74,17 @@ body {
             color: #AAA;
             cursor: pointer;
             &.sidebar-open-button {
-                right: 10px;
+                right: 20px;
             }
         }
         &.open {
-            width: 25%;
+            width: 350px;
             @media screen and (max-width: 768px) {
                 width: 35%;
             }
         }
         &.closed {
-            width: 50px;
+            width: 70px;
         }
     }
 
@@ -93,17 +93,14 @@ body {
             text-align: center;
         }
         &.sidebar-open {
-            margin-left: 30%;
-            width: 70%;
+            margin-left: 400px;
             @media screen and (max-width: 768px) {
                 margin-left: 40%;
-                width: 60%;
             }
         }
 
         &.sidebar-closed {
-            margin-left: 100px;
-            width: 90%;
+            margin-left: 120px;
         }
 
         &.sidebar-open, &.sidebar-closed {
@@ -242,6 +239,7 @@ body {
 
     .copyright {
         margin-top: 20px;
+        padding-bottom: 20px;
     }
 
 

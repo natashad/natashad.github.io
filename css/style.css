@@ -42,7 +42,7 @@ body {
         body .left-sidebar .collapsed-content .contact-links-collapsed a:hover, body .left-sidebar .collapsed-content .contact-links-collapsed a:visited:hover {
           color: #1a1a1a; }
     body .left-sidebar .expanded-content {
-      padding-top: 200px; }
+      padding-top: 40%; }
     body .left-sidebar .sidebar-control {
       font-size: 40px;
       position: absolute;
@@ -51,27 +51,24 @@ body {
       color: #AAA;
       cursor: pointer; }
       body .left-sidebar .sidebar-control.sidebar-open-button {
-        right: 10px; }
+        right: 20px; }
     body .left-sidebar.open {
-      width: 25%; }
+      width: 350px; }
       @media screen and (max-width: 768px) {
         body .left-sidebar.open {
           width: 35%; } }
     body .left-sidebar.closed {
-      width: 50px; }
+      width: 70px; }
   @media screen and (max-width: 480px) {
     body .page {
       text-align: center; } }
   body .page.sidebar-open {
-    margin-left: 30%;
-    width: 70%; }
+    margin-left: 400px; }
     @media screen and (max-width: 768px) {
       body .page.sidebar-open {
-        margin-left: 40%;
-        width: 60%; } }
+        margin-left: 40%; } }
   body .page.sidebar-closed {
-    margin-left: 100px;
-    width: 90%; }
+    margin-left: 120px; }
   @media screen and (max-width: 480px) {
     body .page.sidebar-open, body .page.sidebar-closed {
       margin-left: 0px;
@@ -169,7 +166,8 @@ body {
       body .project-container .project img {
         width: 100%; }
   body .copyright {
-    margin-top: 20px; }
+    margin-top: 20px;
+    padding-bottom: 20px; }
 @keyframes transform-down {
   from {
     transform: scale(1.15); }
