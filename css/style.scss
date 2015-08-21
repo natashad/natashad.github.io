@@ -108,13 +108,16 @@ body {
 
         &.sidebar-open, &.sidebar-closed {
             @media screen and (max-width: 480px) {
-                margin-left: 10px;
+                margin-left: 0px;
                 width: 100%;
             }
         }
 
         .content {
             padding-right: 20px;
+            @media screen and (max-width: 480px) {
+                padding: 10px;
+            }
         }
         ul.hashlist {
           list-style-type: none;
@@ -218,6 +221,9 @@ body {
             width: 50%;
             .project-contents {
                 margin-right: 10px;
+                @media screen and (max-width: 768px) {
+                    margin-right: 0;
+                }
             }
             @media screen and (max-width: 768px) {
                 width: 100%;

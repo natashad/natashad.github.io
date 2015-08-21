@@ -74,10 +74,13 @@ body {
     width: 90%; }
   @media screen and (max-width: 480px) {
     body .page.sidebar-open, body .page.sidebar-closed {
-      margin-left: 10px;
+      margin-left: 0px;
       width: 100%; } }
   body .page .content {
     padding-right: 20px; }
+    @media screen and (max-width: 480px) {
+      body .page .content {
+        padding: 10px; } }
   body .page ul.hashlist {
     list-style-type: none;
     margin-left: 0;
@@ -151,6 +154,9 @@ body {
       width: 50%; }
       body .project-container .project .project-contents {
         margin-right: 10px; }
+        @media screen and (max-width: 768px) {
+          body .project-container .project .project-contents {
+            margin-right: 0; } }
       @media screen and (max-width: 768px) {
         body .project-container .project {
           width: 100%; } }
