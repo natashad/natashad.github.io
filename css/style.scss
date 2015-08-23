@@ -12,7 +12,7 @@ body {
 
     .left-sidebar {
         background: darken(#F0F0F0, 5%);
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 640px) {
             display: none;
         }
         img {
@@ -94,7 +94,7 @@ body {
     }
 
     .page {
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 640px) {
             text-align: center;
         }
         &.sidebar-open {
@@ -109,7 +109,7 @@ body {
         }
 
         &.sidebar-open, &.sidebar-closed {
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 640px) {
                 margin-left: 0px;
                 width: 100%;
             }
@@ -117,7 +117,7 @@ body {
 
         .content {
             padding-right: 20px;
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 640px) {
                 padding: 10px;
             }
         }
@@ -126,7 +126,7 @@ body {
           margin-left: 0;
           display: inline-block;
           vertical-align: top;
-          @media screen and (max-width: 480px) {
+          @media screen and (max-width: 640px) {
             padding-left: 0;
           }
           li {
@@ -135,7 +135,7 @@ body {
             color: #00007f;
             text-transform: uppercase;
             font-weight: bold;
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 640px) {
                 display: inline-block;
             }
           }
@@ -151,7 +151,7 @@ body {
     .subsubtitle {
         margin-bottom: 0;
         margin-left: 40px;
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 640px) {
             margin-left: 0;
         }
         span {
@@ -165,7 +165,7 @@ body {
     }
 
     .subtitle {
-        @media screen and (max-width: 480px) {
+        @media screen and (max-width: 640px) {
             text-align: center;
         }
     }
@@ -181,7 +181,7 @@ body {
             @media screen and (max-width: 768px) {
                 font-size: 50px;
             }
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 640px) {
                 font-size: 40px;
             }
         }
@@ -192,7 +192,7 @@ body {
             @media screen and (max-width: 768px) {
                 font-size: 22px;
             }
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 640px) {
                 font-size: 20px;
             }
         }
@@ -200,7 +200,7 @@ body {
         .mobile-contact-bar {
             display: none;
 
-            @media screen and (max-width: 480px) {
+            @media screen and (max-width: 640px) {
                 display: block;
                 img {
                     border-radius: 50%;
