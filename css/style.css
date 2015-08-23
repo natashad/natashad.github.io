@@ -13,7 +13,7 @@ body {
     position: fixed;
     height: 100%;
     text-align: center; }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 640px) {
       body .left-sidebar {
         display: none; } }
     body .left-sidebar img {
@@ -62,7 +62,7 @@ body {
           width: 35%; } }
     body .left-sidebar.closed {
       width: 70px; }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 640px) {
     body .page {
       text-align: center; } }
   body .page.sidebar-open {
@@ -72,13 +72,13 @@ body {
         margin-left: 40%; } }
   body .page.sidebar-closed {
     margin-left: 120px; }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 640px) {
     body .page.sidebar-open, body .page.sidebar-closed {
       margin-left: 0px;
       width: 100%; } }
   body .page .content {
     padding-right: 20px; }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 640px) {
       body .page .content {
         padding: 10px; } }
   body .page ul.hashlist {
@@ -86,7 +86,7 @@ body {
     margin-left: 0;
     display: inline-block;
     vertical-align: top; }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 640px) {
       body .page ul.hashlist {
         padding-left: 0; } }
     body .page ul.hashlist li {
@@ -95,7 +95,7 @@ body {
       color: #00007f;
       text-transform: uppercase;
       font-weight: bold; }
-      @media screen and (max-width: 480px) {
+      @media screen and (max-width: 640px) {
         body .page ul.hashlist li {
           display: inline-block; } }
   body .page ul.hashlist > li:before {
@@ -105,7 +105,7 @@ body {
   body .subsubtitle {
     margin-bottom: 0;
     margin-left: 40px; }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 640px) {
       body .subsubtitle {
         margin-left: 0; } }
     body .subsubtitle span {
@@ -113,7 +113,7 @@ body {
   body .subtitle span {
     text-transform: uppercase;
     border-bottom: 2px solid orange; }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 640px) {
     body .subtitle {
       text-align: center; } }
   body .header h1 {
@@ -125,7 +125,7 @@ body {
     @media screen and (max-width: 768px) {
       body .header h1 {
         font-size: 50px; } }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 640px) {
       body .header h1 {
         font-size: 40px; } }
   body .header h4 {
@@ -134,12 +134,12 @@ body {
     @media screen and (max-width: 768px) {
       body .header h4 {
         font-size: 22px; } }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 640px) {
       body .header h4 {
         font-size: 20px; } }
   body .header .mobile-contact-bar {
     display: none; }
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 640px) {
       body .header .mobile-contact-bar {
         display: block; }
         body .header .mobile-contact-bar img {
