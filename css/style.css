@@ -4,7 +4,10 @@ body {
   margin: 0;
   margin-top: 0;
   background: #F0F0F0;
+  line-height: 1.5em;
   /*Animations*/ }
+  body h1, body h2, body h3, body h4, body h5 {
+    line-height: 1em; }
   body .left-sidebar {
     background: #e3e3e3;
     position: fixed;
@@ -90,7 +93,8 @@ body {
       padding-right: 5px;
       padding-bottom: 5px;
       color: #00007f;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-weight: bold; }
       @media screen and (max-width: 480px) {
         body .page ul.hashlist li {
           display: inline-block; } }
