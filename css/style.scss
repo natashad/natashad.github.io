@@ -11,7 +11,10 @@ body {
     }
 
     .left-sidebar {
-        background: darken(#F0F0F0, 5%);
+        background: -webkit-linear-gradient(left, #F0F0F0, darken(#F0F0F0, 10%)); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient(right, #F0F0F0, darken(#F0F0F0, 10%)); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient(right, #F0F0F0, darken(#F0F0F0, 10%)); /* For Firefox 3.6 to 15 */
+        background: linear-gradient(to right, #F0F0F0, darken(#F0F0F0, 10%)); /* Standard syntax */
         @media screen and (max-width: 640px) {
             display: none;
         }
@@ -29,16 +32,18 @@ body {
             }
 
             a, a:visited {
+                .fa {
+                    font-size: 20px;
+                    color: black;
+                }
                 text-decoration: none;
-                color: #0000b2;
+                color: blue;
                 &:hover {
-                    color: darken(#0000b2, 10%);
+                    color: darken(blue, 10%);
+                    text-decoration: underline;
                 }
                 i {
                     padding: 0px 5px;
-                }
-                &:hover {
-                    text-decoration: underline;
                 }
             }
         }
@@ -87,10 +92,21 @@ body {
             @media screen and (max-width: 768px) {
                 width: 35%;
             }
+            .collapsed-content {
+                display: none;
+            }
+            .expanded-content {
+                display: block;
+            }
         }
-        &.closed {
-            width: 70px;
+        width: 70px;
+        .expanded-content {
+            display: none;
         }
+        .collapsed-content {
+            display: block;
+        }
+
     }
 
     .page {
@@ -104,11 +120,9 @@ body {
             }
         }
 
-        &.sidebar-closed {
-            margin-left: 120px;
-        }
+        margin-left: 120px;
 
-        &.sidebar-open, &.sidebar-closed {
+        &.sidebar-open, & {
             @media screen and (max-width: 640px) {
                 margin-left: 0px;
                 width: 100%;
@@ -172,6 +186,7 @@ body {
 
 
     .header {
+        padding-top: 10px;
         h1 {
             font-family: 'Allerta Stencil', sans-serif;
             font-size: 70px;
