@@ -126,17 +126,17 @@ body {
             min-width: $sb-closed-width;
             width: $sb-closed-width;
             .collapsed-content {
-                display: none;
+                /*display: none;*/
             }
             .expanded-content {
-                display: block;
+                /*display: block;*/
             }
         }
         .expanded-content {
-            display: none;
+            /*display: none;*/
         }
         .collapsed-content {
-            display: block;
+            /*display: block;*/
         }
 
     }
