@@ -1,3 +1,6 @@
+$sb-open-width: 80px;
+$sb-closed-width: 300px;
+
 body {
     font-family: 'Raleway', sans-serif;
     font-size: 16px;
@@ -10,21 +13,23 @@ body {
         line-height: 1em;
     }
 
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+
     .left-sidebar {
-        background: -webkit-linear-gradient(left, #F0F0F0, darken(#F0F0F0, 10%)); /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(right, #F0F0F0, darken(#F0F0F0, 10%)); /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(right, #F0F0F0, darken(#F0F0F0, 10%)); /* For Firefox 3.6 to 15 */
-        background: linear-gradient(to right, #F0F0F0, darken(#F0F0F0, 10%)); /* Standard syntax */
+        height: 100%;
+        animation: down-size 0.25s linear 0s;
+        min-width: $sb-open-width;
+        width: $sb-open-width;
+        text-align: center;
         @media screen and (max-width: 640px) {
             display: none;
         }
         img {
             border-radius: 50%;
         }
-
-        position: fixed;
-        height: 100%;
-        text-align: center;
 
         .contact-links {
             div {
@@ -48,8 +53,20 @@ body {
             }
         }
 
+        .collapsed-content, .expanded-content {
+            position: fixed;
+            padding-left: 10px;
+            height: 100%;
+            background: -webkit-linear-gradient(left, #F0F0F0, darken(#F0F0F0, 10%)); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(right, #F0F0F0, darken(#F0F0F0, 10%)); /* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(right, #F0F0F0, darken(#F0F0F0, 10%)); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to right, #F0F0F0, darken(#F0F0F0, 10%)); /* Standard syntax */
+        }
+
         .collapsed-content {
             padding-top: 200px;
+            padding-right: 10px;
+            animation: move-left 0.25s linear 0s;
             .contact-links-collapsed  {
                 text-align: center;
                 .fa {
@@ -73,25 +90,41 @@ body {
         }
 
         .expanded-content {
-            padding-top: 40%;
+            padding-top: 150px;
+            min-width: $sb-closed-width;
+        }
+
+        &:not(.initial) .expanded-content {
+            animation: move-right 0.25s linear 0s;
+        }
+
+        &.inital .expanded-content {
+            animation: move-right 0.1s linear 0s ;
         }
 
         .sidebar-control {
             font-size: 40px;
             position: absolute;
-            top: 30px;
+            top: 20px;
             right: 20px;
             color: #AAA;
             cursor: pointer;
             &.sidebar-open-button {
-                right: 20px;
+                right: 15px;
             }
         }
+
+        &.open:not(.initial) {
+            width: $sb-open-width;
+            animation: up-size 0.25s linear 0s;
+        }
+        &.open.initial {
+            animation: up-size 0.1s linear 0s;
+        }
+
         &.open {
-            width: 350px;
-            @media screen and (max-width: 768px) {
-                width: 35%;
-            }
+            min-width: $sb-closed-width;
+            width: $sb-closed-width;
             .collapsed-content {
                 display: none;
             }
@@ -99,7 +132,6 @@ body {
                 display: block;
             }
         }
-        width: 70px;
         .expanded-content {
             display: none;
         }
@@ -113,14 +145,10 @@ body {
         @media screen and (max-width: 640px) {
             text-align: center;
         }
-        &.sidebar-open {
-            margin-left: 400px;
-            @media screen and (max-width: 768px) {
-                margin-left: 40%;
-            }
-        }
 
-        margin-left: 120px;
+        &.sidebar-open {
+            margin-left: 40px;
+        }
 
         &.sidebar-open, & {
             @media screen and (max-width: 640px) {
@@ -268,4 +296,23 @@ body {
     @keyframes transform-down{
         from{transform:scale(1.15)}
         to{transform:scale(1)}}
+
+
+    @keyframes move-left {
+        from{margin-left: 220px;}
+        to {margin-left: 0px;}
+    }
+
+    @keyframes move-right {
+        from{margin-left: -$sb-closed-width;}
+        to {margin-left: 0px;}
+    }
+
+    @keyframes down-size {
+        from{width: $sb-closed-width; min-width: $sb-closed-width;}
+        to {width: $sb-open-width; min-width: $sb-open-width;}}
+
+    @keyframes up-size {
+        from{width: $sb-open-width; min-width: $sb-open-width;}
+        to {width: $sb-closed-width; min-width: $sb-closed-width;}}
 }

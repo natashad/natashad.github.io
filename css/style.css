@@ -5,22 +5,19 @@ body {
   margin-top: 0;
   background: #F0F0F0;
   line-height: 1.5em;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
   /*Animations*/ }
   body h1, body h2, body h3, body h4, body h5 {
     line-height: 1em; }
   body .left-sidebar {
-    background: -webkit-linear-gradient(left, #F0F0F0, #d7d7d7);
-    /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(right, #F0F0F0, #d7d7d7);
-    /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(right, #F0F0F0, #d7d7d7);
-    /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to right, #F0F0F0, #d7d7d7);
-    /* Standard syntax */
-    position: fixed;
     height: 100%;
-    text-align: center;
-    width: 70px; }
+    animation: down-size 0.25s linear 0s;
+    min-width: 80px;
+    width: 80px;
+    text-align: center; }
     @media screen and (max-width: 640px) {
       body .left-sidebar {
         display: none; } }
@@ -39,8 +36,22 @@ body {
         text-decoration: underline; }
       body .left-sidebar .contact-links a i, body .left-sidebar .contact-links a:visited i {
         padding: 0px 5px; }
+    body .left-sidebar .collapsed-content, body .left-sidebar .expanded-content {
+      position: fixed;
+      padding-left: 10px;
+      height: 100%;
+      background: -webkit-linear-gradient(left, #F0F0F0, #d7d7d7);
+      /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(right, #F0F0F0, #d7d7d7);
+      /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(right, #F0F0F0, #d7d7d7);
+      /* For Firefox 3.6 to 15 */
+      background: linear-gradient(to right, #F0F0F0, #d7d7d7);
+      /* Standard syntax */ }
     body .left-sidebar .collapsed-content {
       padding-top: 200px;
+      padding-right: 10px;
+      animation: move-left 0.25s linear 0s;
       display: none; }
       body .left-sidebar .collapsed-content .contact-links-collapsed {
         text-align: center; }
@@ -55,21 +66,29 @@ body {
         body .left-sidebar .collapsed-content .contact-links-collapsed a:hover, body .left-sidebar .collapsed-content .contact-links-collapsed a:visited:hover {
           color: #1a1a1a; }
     body .left-sidebar .expanded-content {
-      padding-top: 40%; }
+      padding-top: 150px;
+      min-width: 300px; }
+    body .left-sidebar:not(.initial) .expanded-content {
+      animation: move-right 0.25s linear 0s; }
+    body .left-sidebar.inital .expanded-content {
+      animation: move-right 0.1s linear 0s; }
     body .left-sidebar .sidebar-control {
       font-size: 40px;
       position: absolute;
-      top: 30px;
+      top: 20px;
       right: 20px;
       color: #AAA;
       cursor: pointer; }
       body .left-sidebar .sidebar-control.sidebar-open-button {
-        right: 20px; }
+        right: 15px; }
+    body .left-sidebar.open:not(.initial) {
+      width: 80px;
+      animation: up-size 0.25s linear 0s; }
+    body .left-sidebar.open.initial {
+      animation: up-size 0.1s linear 0s; }
     body .left-sidebar.open {
-      width: 350px; }
-      @media screen and (max-width: 768px) {
-        body .left-sidebar.open {
-          width: 35%; } }
+      min-width: 300px;
+      width: 300px; }
       body .left-sidebar.open .collapsed-content {
         display: none; }
       body .left-sidebar.open .expanded-content {
@@ -78,46 +97,41 @@ body {
       display: none; }
     body .left-sidebar .collapsed-content {
       display: block; }
-  body .page {
-    margin-left: 120px; }
+  @media screen and (max-width: 640px) {
+    body .page {
+      text-align: center; } }
+  body .page.sidebar-open {
+    margin-left: 40px; }
+  @media screen and (max-width: 640px) {
+    body .page.sidebar-open, body .page {
+      margin-left: 0px;
+      width: 100%; } }
+  body .page .content {
+    padding-right: 20px; }
     @media screen and (max-width: 640px) {
-      body .page {
-        text-align: center; } }
-    body .page.sidebar-open {
-      margin-left: 400px; }
-      @media screen and (max-width: 768px) {
-        body .page.sidebar-open {
-          margin-left: 40%; } }
+      body .page .content {
+        padding: 10px; } }
+  body .page ul.hashlist {
+    list-style-type: none;
+    margin-left: 0;
+    display: inline-block;
+    vertical-align: top; }
     @media screen and (max-width: 640px) {
-      body .page.sidebar-open, body .page {
-        margin-left: 0px;
-        width: 100%; } }
-    body .page .content {
-      padding-right: 20px; }
+      body .page ul.hashlist {
+        padding-left: 0; } }
+    body .page ul.hashlist li {
+      padding-right: 5px;
+      padding-bottom: 5px;
+      color: #00007f;
+      text-transform: uppercase;
+      font-weight: bold; }
       @media screen and (max-width: 640px) {
-        body .page .content {
-          padding: 10px; } }
-    body .page ul.hashlist {
-      list-style-type: none;
-      margin-left: 0;
-      display: inline-block;
-      vertical-align: top; }
-      @media screen and (max-width: 640px) {
-        body .page ul.hashlist {
-          padding-left: 0; } }
-      body .page ul.hashlist li {
-        padding-right: 5px;
-        padding-bottom: 5px;
-        color: #00007f;
-        text-transform: uppercase;
-        font-weight: bold; }
-        @media screen and (max-width: 640px) {
-          body .page ul.hashlist li {
-            display: inline-block; } }
-    body .page ul.hashlist > li:before {
-      content: "#";
-      float: left;
-      width: 1em; }
+        body .page ul.hashlist li {
+          display: inline-block; } }
+  body .page ul.hashlist > li:before {
+    content: "#";
+    float: left;
+    width: 1em; }
   body .subsubtitle {
     margin-bottom: 0;
     margin-left: 40px; }
@@ -195,5 +209,29 @@ body {
     transform: scale(1.15); }
   to {
     transform: scale(1); } }
+@keyframes move-left {
+  from {
+    margin-left: 220px; }
+  to {
+    margin-left: 0px; } }
+@keyframes move-right {
+  from {
+    margin-left: -300px; }
+  to {
+    margin-left: 0px; } }
+@keyframes down-size {
+  from {
+    width: 300px;
+    min-width: 300px; }
+  to {
+    width: 80px;
+    min-width: 80px; } }
+@keyframes up-size {
+  from {
+    width: 80px;
+    min-width: 80px; }
+  to {
+    width: 300px;
+    min-width: 300px; } }
 
 /*# sourceMappingURL=style.css.map */

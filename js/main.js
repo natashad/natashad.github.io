@@ -15,9 +15,8 @@ function responsive_sidebar() {
 
 function setup_sidebar_controls() {
     $('.sidebar-close-button, .sidebar-open-button').click(function() {
-
+        $('.left-sidebar').removeClass('initial');
         $('.page').toggleClass('sidebar-open');
         $('.left-sidebar').toggleClass('open');
-
     });
 }
