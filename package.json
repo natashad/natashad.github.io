@@ -1,0 +1,27 @@
+{
+  "name": "natashad.github.io",
+  "version": "1.0.0",
+  "description": "Natasha Dalal -- Software Engineer and Web Developer. Toronto, Ontario",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natashad/natashad.github.io.git"
+  },
+  "author": "Natasha Dalal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natashad/natashad.github.io/issues"
+  },
+  "homepage": "https://github.com/natashad/natashad.github.io#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^1.12.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "gulp-uglify": "^1.5.1"
+  }
+}
