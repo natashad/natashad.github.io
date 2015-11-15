@@ -204,21 +204,25 @@ body {
   body .copyright {
     margin-top: 20px;
     padding-bottom: 20px; }
+
 @keyframes transform-down {
   from {
     transform: scale(1.15); }
   to {
     transform: scale(1); } }
+
 @keyframes move-left {
   from {
     margin-left: 220px; }
   to {
     margin-left: 0px; } }
+
 @keyframes move-right {
   from {
     margin-left: -300px; }
   to {
     margin-left: 0px; } }
+
 @keyframes down-size {
   from {
     width: 300px;
@@ -226,6 +230,7 @@ body {
   to {
     width: 80px;
     min-width: 80px; } }
+
 @keyframes up-size {
   from {
     width: 80px;
@@ -233,5 +238,3 @@ body {
   to {
     width: 300px;
     min-width: 300px; } }
-
-/*# sourceMappingURL=style.css.map */
