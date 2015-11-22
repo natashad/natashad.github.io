@@ -1,0 +1,40 @@
+{
+  "name": "natashad.github.io",
+  "description": "Natasha Dalal -- Software Engineer and Web Developer. Toronto, Ontario",
+  "main": "dist/all.min.js",
+  "authors": [
+    "Natasha Dalal"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "Natasha",
+    "Dalal",
+    "Software",
+    "Engineer",
+    "Web",
+    "Developer",
+    "Freelance",
+    "Toronto",
+    "Canada",
+    "Ontario",
+    "Remote",
+    "India",
+    "Mumbai",
+    "Goa"
+  ],
+  "homepage": "http://natashadalal.ca",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.11.4",
+    "fontawesome": "~4.4.0"
+  }
+}
